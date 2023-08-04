@@ -14,3 +14,17 @@ function textWriter(el) {
 }
 
 textWriter(textTitle);
+
+/* mode preview */
+
+const html = document.documentElement;
+const btnMode = document.querySelector('#switch');
+
+function toggleMode() {
+    html.classList.toggle('light');
+}
+
+btnMode.addEventListener("click", () => {
+    toggleMode();
+})
+
