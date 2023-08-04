@@ -17,7 +17,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="-license">Licença</a>
+  <a href="#-license">Licença</a>
 </p>
 
 <br> <br>
@@ -45,10 +45,10 @@ This project was developed with the following technologies:
 
 >⚙ Learnings I was able to put into practice:
 <br> 
->- Logical reasoning and algorithms;
->- SEO practices;
->- HTML semantic and CSS;
->- Java Script;
+> - Logical reasoning and algorithms;
+> - SEO practices;
+> - HTML semantic and CSS;
+> - Java Script;
 
 <br>
  

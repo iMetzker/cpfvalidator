@@ -17,7 +17,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="-license">Licença</a>
+  <a href="#-license">Licença</a>
 </p>
 
 <br> <br>
@@ -31,6 +31,13 @@
 
 <br>
 
+## 🚀 Projeto
+
+O projeto consiste em um programa de validação simples de CPF que utiliza ...
+
+
+<br>
+
 ## 🛸 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -39,19 +46,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 - Git
 
-## 🚀 Projeto
-
-O projeto consiste em um programa de validação simples de CPF que utiliza ...
-
->⚙ Aprendizados que pude coloccar em prática:
-<br> 
->- Raciocío lógico e algorítmos;
->- Práticas de SEO;
->- HTML semântico e CSS;
->- Java Script;
-
-<br>
- 
 ## 💻 Layout
 
 <img src="./assets/img/preview-lk.png" alt="pré visualização do projeto">
