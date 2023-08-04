@@ -2,7 +2,14 @@
 :root {
     --bg-avatar: #fff;
     --switch-bg-url: url(../img/mode/MoonStars.svg);
+    --bg-default: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 }
+
+.light {
+--switch-bg-url: url(../img/mode/Sun.svg);
+--bg-default: linear-gradient(-45deg, #000, #141114, #2d1128, #43143f);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +20,7 @@ body {
     font-family: 'Handjet', cursive;
 	height: 100vh;
 
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: var(--bg-default); 
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
@@ -84,7 +91,13 @@ h1 {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+
+    animation: mode-back .4s;
 }
+
+.light #switch button {
+    animation: mode-in .4s forwards;
+  }
 
 #switch button:hover {
     box-shadow: 1px 1px 10px 10px var(--surface-color);
@@ -114,6 +127,24 @@ h1 {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@keyframes mode-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes mode-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
 
 
