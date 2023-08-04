@@ -1,12 +1,12 @@
 <table align="left">
     <tr>
         <td>
-                <a href="README.md"> 🇧🇷 Português </a>
+            <b>
+              <a href="README.md"> 🇧🇷 Português </a>
+            </b>
         </td>
         <td>
-            <b>
-                <a href="readme-us.md"> 🇺🇸 English </a>
-            </b>
+            <a href="readme-us.md"> 🇺🇸 English </a>
         </td>
     </tr>
 
@@ -17,7 +17,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="./LICENSE">Licença</a>
+  <a href="-license">Licença</a>
 </p>
 
 <br> <br>
@@ -56,5 +56,7 @@ O projeto consiste em um programa de validação simples de CPF que utiliza ...
 
 <img src="./assets/img/preview-lk.png" alt="pré visualização do projeto">
 <p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+  <a href="/LICENSE">
+    <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+  </a>
 </p>
