@@ -1,14 +1,18 @@
 /* global */
 :root {
-    --bg-avatar: #fff;
+    --bg-avatar: #ffffff;
     --switch-bg-url: url(../img/mode/MoonStars.svg);
-    --bg-default: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    --bg-default: url(../img/bg/bg-desktop-light.jpg);
+    --text-color: #242423;
 }
 
 .light {
+--bg-avatar: #1b1b1e;
 --switch-bg-url: url(../img/mode/Sun.svg);
---bg-default: linear-gradient(-45deg, #000, #141114, #2d1128, #43143f);
+--bg-default: url(../img/bg/bg-desktop.jpg);
+--text-color: #ffffff;
 }
+
 
 * {
     margin: 0;
@@ -19,10 +23,8 @@
 body {
     font-family: 'Handjet', cursive;
 	height: 100vh;
-
-    background: var(--bg-default); 
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+    background: var(--bg-default) no-repeat top center/cover;
+    color: var(--text-color);
 }
 
 body,
@@ -36,11 +38,6 @@ section {
 
 section {
     padding: 30px;
-    width: 330px;
-
-    background: rgba(255, 255, 255, 0.089);
-    box-shadow: 1px 3px 10px  1px rgba(255, 255, 255, .3);
-    border-radius: 5px;
 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -66,7 +63,7 @@ h1 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: var(--bg-avatar);
+    background-color: #fff;
 }
 
 
@@ -111,7 +108,7 @@ h1 {
     width: 64px;
     height: 24px;
 
-    border: 1px solid #000;
+    border: 1px solid var(--text-color);
   
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -134,14 +131,17 @@ label {
 }
 
 input {
-    border: 1px solid #ced4da;
+    text-align: center;
+    border: none;
     outline: none;
     border-radius: 6px;
 
     padding: 15px 20px;
     font-family: 'Handjet', cursive;
     font-size: 25px;
-    width: 185px;
+    width: 100%;
+    background-color: var(--bg-avatar);
+    color: var(--text-color);
 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -153,10 +153,12 @@ input:focus {
 
 .interaction button {
     cursor: pointer;
-    border: 1px solid #ced4da;
+    border: none;
     border-radius: 10px;
+    background: var(--bg-avatar);
 
     padding: 15px 20px;
+    color: var(--text-color);
     font-size: 25px;
     font-weight: 400;
     font-family: 'Handjet', cursive;
@@ -173,17 +175,6 @@ input:focus {
    }
 
 /* animation */
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
 @keyframes mode-in {
     from {
