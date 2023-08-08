@@ -1,65 +1,77 @@
 /* title */
-const textTitle = document.querySelector('h1');
+const textTitle = document.querySelector("h1");
 
 function textWriter(el) {
-    const textArray = el.innerHTML.split("");
-    el.innerHTML = "";
+  const textArray = el.innerHTML.split("");
+  el.innerHTML = "";
 
-    textArray.forEach((letra, i) => {
-        setTimeout(() => {
-            el.innerHTML += letra;
-        }, 90 * i);
-        
-    });
+  textArray.forEach((letra, i) => {
+    setTimeout(() => {
+      el.innerHTML += letra;
+    }, 90 * i);
+  });
 }
 
 textWriter(textTitle);
 
 /* mode preview */
 const html = document.documentElement;
-const btnMode = document.querySelector('#switch');
+const btnMode = document.querySelector("#switch");
 
 function toggleMode() {
-    html.classList.toggle('light');
+  html.classList.toggle("light");
 }
 
 btnMode.addEventListener("click", () => {
-    toggleMode();
-})
+  toggleMode();
+});
 
-/* input cpf */
-let cpf = document.querySelector("#cpf");
+/* input cpf typed */
+let cpfTyped = document.querySelector("#cpf");
 
-cpf.addEventListener("keyup", () => {
-
-  if (cpf.value.length == 3 || cpf.value.length == 7) {
-    cpf.value += "."
-  } else if (cpf.value.length == 11) {
-    cpf.value += "-"
+cpfTyped.addEventListener("keyup", () => {
+  if (cpfTyped.value.length == 3 || cpfTyped.value.length == 7) {
+    cpfTyped.value += ".";
+  } else if (cpfTyped.value.length == 11) {
+    cpfTyped.value += "-";
   }
-  
 });
 
 /* validation */
-const input = document.querySelector('.interaction');
+const input = document.querySelector(".interaction");
 
-function preventSubmit (event) {
+function preventSubmit(event) {
   event.preventDefault();
 
-  const inputCpf = event.target.querySelector('#cpf');
+  let inputCpf = event.target.querySelector("#cpf");
 
-  let cpfClean = inputCpf.value.replace(/\D+/g, '');
+  const cpf = new ValidateCPF(inputCpf);
 
-  console.log('CPF digitado:', cpfClean);
- 
+  function ValidateCPF() {
+    Object.defineProperty(this, "cpfClean", {
+      enumerable: true,
+      get: function () {
+        return Number(inputCpf.value.replace(/\D+/g, ""));
+      },
+    });
+  }
+
+  ValidateCPF.prototype.valida = function () {
+
+    /* checking null sending or equal numbers */
+    if (this.cpfClean === 0 || typeof this.cpfClean === 'undefined') return false;
+    if (String(this.cpfClean).length !== 11) return false;
+    return true;
+  };
+
+  ValidateCPF.prototype.createDigit = function () {
+    
+  }
+
+  console.log(cpf.valida());
+  console.log(typeof cpf.cpfClean);
+  console.log(cpf.cpfClean);
+  console.log(String(cpf.cpfClean).length);
 }
 
-
 input.addEventListener("submit", preventSubmit);
-
-
-
-
-
-
-
