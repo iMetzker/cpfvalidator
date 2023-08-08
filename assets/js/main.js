@@ -31,7 +31,7 @@ btnMode.addEventListener("click", () => {
 let cpf = document.querySelector("#cpf");
 
 cpf.addEventListener("keyup", () => {
-  
+
   if (cpf.value.length == 3 || cpf.value.length == 7) {
     cpf.value += "."
   } else if (cpf.value.length == 11) {
@@ -41,30 +41,25 @@ cpf.addEventListener("keyup", () => {
 });
 
 /* validation */
-const cpfTest = '131.776.926-01'
+const input = document.querySelector('.interaction');
 
-let cpfClean = cpfTest.replace(/\D+/g, '');
-cpfArray = Array.from(cpfClean);
-console.log(cpfArray.reduce((ac, val) => ac + Number(val), 0));
+function preventSubmit (event) {
+  event.preventDefault();
 
-function ValidaCPF(cpfEnviado) {
-    Object.defineProperty(this, 'cpfClena', {
-      enumerable: true,
-      get: function() {
-        return cpfEnviado.replace(/\D+/g, '');
-      }
-    });
-  }
-  
-  ValidaCPF.prototype.valida = function() {
-    if(typeof this.cpfLimpo === 'undefined') return false;
-    if(this.cpfLimpo.length !== 11) return false;
-    if(this.isSequencia()) return false;
-  
-    const cpfParcial = this.cpfLimpo.slice(0, -2);
-    const digito1 = this.criaDigito(cpfParcial);
-    const digito2 = this.criaDigito(cpfParcial + digito1);
-  
-    const novoCpf = cpfParcial + digito1 + digito2;
-    return novoCpf === this.cpfLimpo;
-  };
+  const inputCpf = event.target.querySelector('#cpf');
+
+  let cpfClean = inputCpf.value.replace(/\D+/g, '');
+
+  console.log('CPF digitado:', cpfClean);
+ 
+}
+
+
+input.addEventListener("submit", preventSubmit);
+
+
+
+
+
+
+
