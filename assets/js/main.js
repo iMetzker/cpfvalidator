@@ -31,9 +31,13 @@ btnMode.addEventListener("click", () => {
 let cpf = document.querySelector("#cpf");
 
 cpf.addEventListener("keyup", () => {
-  let value = cpf.value.replace(/[^0-9]/g, "").replace(/^([\d]{3})([\d]{3})?([\d]{3})?([\d]{2})?/, "$1.$2.$3-$4");
   
-  cpf.value = value;
+  if (cpf.value.length == 3 || cpf.value.length == 7) {
+    cpf.value += "."
+  } else if (cpf.value.length == 11) {
+    cpf.value += "-"
+  }
+  
 });
 
 /* validation */
