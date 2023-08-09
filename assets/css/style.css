@@ -4,6 +4,9 @@
     --switch-bg-url: url(../img/mode/MoonStars.svg);
     --bg-default: url(../img/bg/bg-desktop-light.jpg);
     --text-color: #242423;
+    --eyes-color: #000000;
+    --bg-color-icon: #52b788;
+    --icon-svg: url(../img/response/heart-svgrepo-com.svg);
 }
 
 .light {
@@ -11,6 +14,12 @@
 --switch-bg-url: url(../img/mode/Sun.svg);
 --bg-default: url(../img/bg/bg-desktop.jpg);
 --text-color: #ffffff;
+--eyes-color: #3a2044;
+}
+
+.fail {
+    --bg-color-icon: #a4161a;
+    --icon-svg: url(../img/response/heart-broken-svgrepo-com.svg);
 }
 
 
@@ -53,12 +62,15 @@ h1 {
 /* avatar */
 .avatar img {
     width: 150px;
+
+    position: relative;
 }
 
 .avatar {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     width: 200px;
     height: 200px;
@@ -66,6 +78,60 @@ h1 {
     background-color: #fff;
 }
 
+.eyes {
+    position: absolute;
+    top: 105px;
+
+    display: flex;
+    gap: 22px;
+}
+
+.eyes span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--eyes-color);
+
+    animation: eyes-blink 2s infinite;
+}
+
+.false .eyes span {
+    display: none;
+}
+
+#result-cpf {
+    position: absolute;
+    top: -30px;
+    left: 170px;
+    width: 130px;
+
+    padding: 10px 20px;
+    border-radius: 30px 10px;
+    background-color: #242423;
+    
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.icon-heart {
+    background: #fff var(--icon-svg) no-repeat center;
+    height: 32px;
+    width: 32px;
+
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -13px;
+}
+
+.icon-heart {
+    background-color: var(--bg-color-icon);
+}
+
+.false#result-cpf {
+    display: none;
+}
 
 /* switch */
 #switch {
@@ -202,5 +268,20 @@ input:focus {
         font-weight: 600;
     }
 }
+
+@keyframes eyes-blink {
+    0%, 100% {
+        transform: scaleY(0.1);
+      }
+      50%, 90% {
+        transform: scaleY(1);
+      }
+      55%, 85% {
+        transform: scaleY(1);
+      }
+      100% {
+        transform: scaleY(0.1);
+      }
+    }
 
 

@@ -86,12 +86,35 @@ function preventSubmit(event) {
     return digit > 9 ? '0' : String(digit);
   };
 
+  /* checking if the cpf is a sequence */
   ValidateCPF.prototype.isSequence = function () {
     const sequence = this.cpfClean[0].repeat(this.cpfClean.length);
     return sequence === this.cpfClean;
   }
 
-  console.log(cpf.valida());
+  /* result */
+  const img = document.querySelector('.avatar img');
+  const boxResult = document.querySelector('#result-cpf');
+  const p = document.querySelector('#result-cpf p');
+  const avatar = document.querySelector('.avatar');
+
+  if (cpf.valida()) {
+    avatar.classList.add('false');
+    avatar.classList.remove('fail');
+    boxResult.classList.remove('false');
+    img.setAttribute('src', './assets/img/avatar/avatar-valid.png');
+    img.setAttribute('alt', 'robô feliz com olhos fechados.');
+    p.innerHTML = `Isso ai! Este CPF é válido!`;
+    textWriter(p);
+  } else {
+    avatar.classList.add('fail');
+    avatar.classList.add('false');
+    boxResult.classList.remove('false');
+    img.setAttribute('src', './assets/img/avatar/avatar-fail.png');
+    img.setAttribute('alt', 'robô triste com olhos em formato de xis.');
+    p.innerHTML = `Nada disso! Este CPF não é válido!`;
+    textWriter(p);
+  }
 }
 
 input.addEventListener("submit", preventSubmit);
