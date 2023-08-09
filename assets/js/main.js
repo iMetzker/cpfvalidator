@@ -51,7 +51,7 @@ function preventSubmit(event) {
     Object.defineProperty(this, "cpfClean", {
       enumerable: true,
       get: function () {
-        return Number(inputCpf.value.replace(/\D+/g, ""));
+        return inputCpf.value.replace(/\D+/g, "");
       },
     });
   }
@@ -60,18 +60,33 @@ function preventSubmit(event) {
 
     /* checking null sending or equal numbers */
     if (this.cpfClean === 0 || typeof this.cpfClean === 'undefined') return false;
-    if (String(this.cpfClean).length !== 11) return false;
+    if (this.cpfClean.length !== 11) return false;
+    
+    /* slicing to account */
+    const cpfPartialDigit = this.cpfClean.slice(0, -2);
+    const firstDigit = this.createDigit(cpfPartialDigit);
     return true;
   };
 
-  ValidateCPF.prototype.createDigit = function () {
+  ValidateCPF.prototype.createDigit = function (cpfPartial) {
+    const cpfArray = Array.from(cpfPartial);
     
-  }
+    let regressiveCounter = cpfArray.length + 1;
+    let digit = cpfArray.reduce((ac, val) => {
+      ac += (regressiveCounter * Number(val));
+      regressiveCounter --;
+      return ac;
+    }, 0);
+    console.log(digit);
+  };
 
   console.log(cpf.valida());
+
+  /*
   console.log(typeof cpf.cpfClean);
   console.log(cpf.cpfClean);
   console.log(String(cpf.cpfClean).length);
+  */
 }
 
 input.addEventListener("submit", preventSubmit);
