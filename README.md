@@ -67,7 +67,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Layout
 
-<img src="./assets/img/project/preview-validator.png" alt="preview do projeto">
+<img src="./src/assets/img/preview/preview-validator.png" alt="preview do projeto">
 
 <br>
 

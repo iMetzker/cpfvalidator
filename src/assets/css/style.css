@@ -1,0 +1,164 @@
+/* global */
+:root {
+    --bg-avatar: #ffffff;
+    --switch-bg-url: url(../img/mode/MoonStars.svg);
+    --bg-default: url(../img/bg/bg-desktop-light.jpg);
+    --text-color: #242423;
+    --eyes-color: #000000;
+    --bg-color-icon: #52b788;
+    --icon-svg: url(../img/verification/heart-svgrepo-com.svg);
+}
+
+.light {
+--bg-avatar: #1b1b1e;
+--switch-bg-url: url(../img/mode/Sun.svg);
+--bg-default: url(../img/bg/bg-desktop.jpg);
+--text-color: #ffffff;
+--eyes-color: #3a2044;
+}
+
+.fail {
+    --bg-color-icon: #a4161a;
+    --icon-svg: url(../img/verification/heart-broken-svgrepo-com.svg);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Handjet', cursive;
+	height: 100vh;
+    background: var(--bg-default) no-repeat top center/cover;
+    color: var(--text-color);
+}
+
+body,
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* avatar */
+
+ img {
+    width: 150px;
+    position: relative;
+}
+
+.false .eyes span {
+    display: none;
+}
+
+.icon-heart {
+    background: var(--bg-color-icon) var(--icon-svg) no-repeat center;
+}
+
+.false#result-cpf {
+    display: none;
+}
+
+/* switch */
+#switch button {
+    background: #ffffff var(--switch-bg-url) no-repeat center;
+}
+
+.light #switch button {
+    animation: mode-in .4s forwards;
+  }
+
+#switch button:hover {
+    box-shadow: 1px 1px 10px 10px var(--surface-color);
+}
+
+#switch span {
+    border: 1px solid var(--text-color);
+  }
+
+/* field */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+label {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+input {
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+
+    padding: 15px 20px;
+    font-family: 'Handjet', cursive;
+    font-size: 25px;
+    width: 100%;
+    background-color: var(--bg-avatar);
+    color: var(--text-color);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+input:focus {
+    box-shadow: 2px 2px 10px 1px #fff;
+   }
+
+.interaction button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: var(--bg-avatar);
+
+    padding: 15px 20px;
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Handjet', cursive;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    animation: blink-text 1s infinite;
+   }
+
+   .interaction button:hover {
+    animation: none;
+    font-weight: 600;
+   }
+
+/* animation */
+
+@keyframes mode-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+
+
+@keyframes blink-text {
+    0% {
+        font-weight: 400;
+    }
+    100% {
+        font-weight: 600;
+    }
+}
