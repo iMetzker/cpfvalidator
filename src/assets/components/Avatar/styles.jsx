@@ -102,3 +102,10 @@ text-transform: uppercase;
 font-size: 35px;
 
 `
+
+export const Img = styled.img`
+
+width: 150px;
+position: relative;
+
+`

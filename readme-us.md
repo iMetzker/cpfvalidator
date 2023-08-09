@@ -35,9 +35,11 @@
 
 This project was developed with the following technologies:
 
-- HTML e CSS
-- JavaScript
-- Git
+- HTML e CSS;
+- JavaScript;
+- React;
+- Styled Components;
+- Git.
 
 ## 🚀 Project
 

@@ -52,8 +52,11 @@ A lógica para a conta de validação de CPF utilizada no projeto foi com base e
 
 ⚙ Aprendizados que pude colocar em prática:
 
-- HTML semântico e CSS;
+- HTML e CSS;
 - Javascript;
+- React;
+- Styled Components;
+- Git.
 
 <br>
 
