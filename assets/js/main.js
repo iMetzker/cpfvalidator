@@ -61,16 +61,15 @@ function preventSubmit(event) {
     /* checking null sending or equal numbers */
     if (this.cpfClean === 0 || typeof this.cpfClean === 'undefined') return false;
     if (this.cpfClean.length !== 11) return false;
+    if (this.isSequence()) return false;
     
-    /* slicing to account */
+    /* account */
     const cpfPartialDigit = this.cpfClean.slice(0, -2);
     const firstDigit = this.createDigit(cpfPartialDigit);
     const secondDigit = this.createDigit(cpfPartialDigit + firstDigit);
     
     const newCpf = cpfPartialDigit + firstDigit + secondDigit;
-    console.log(newCpf);
-
-    return true;
+    return newCpf === this.cpfClean;
   };
 
   ValidateCPF.prototype.createDigit = function (cpfPartial) {
@@ -87,13 +86,12 @@ function preventSubmit(event) {
     return digit > 9 ? '0' : String(digit);
   };
 
-  console.log(cpf.valida());
+  ValidateCPF.prototype.isSequence = function () {
+    const sequence = this.cpfClean[0].repeat(this.cpfClean.length);
+    return sequence === this.cpfClean;
+  }
 
-  /*
-  console.log(typeof cpf.cpfClean);
-  console.log(cpf.cpfClean);
-  console.log(String(cpf.cpfClean).length);
-  */
+  console.log(cpf.valida());
 }
 
 input.addEventListener("submit", preventSubmit);
