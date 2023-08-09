@@ -112,7 +112,7 @@ function preventSubmit(event) {
     boxResult.classList.remove('false');
     img.setAttribute('src', './assets/img/avatar/avatar-fail.png');
     img.setAttribute('alt', 'robô triste com olhos em formato de xis.');
-    p.innerHTML = `Nada disso! Este CPF não é válido!`;
+    p.innerHTML = `Oh não! Este CPF não é válido!`;
     textWriter(p);
   }
 }

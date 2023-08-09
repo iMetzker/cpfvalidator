@@ -41,23 +41,40 @@ This project was developed with the following technologies:
 
 ## 🚀 Project
 
- ...
+The project consists of creating a user-interactive web page for CPF validation.
 
->⚙ Learnings I was able to put into practice:
-<br> 
-> - Logical reasoning and algorithms;
-> - SEO practices;
-> - HTML semantic and CSS;
-> - Java Script;
+<br>
+
+The logic for the CPF validation account used in the project was based on the fact that a CPF number consists of 11 digits, the first 9 are the base numbers, and the last 2 are the so-called check digits, which are used to validate if the base 9 numbers are correct.
+
+- The first validation performed was to multiply each base number separately, starting with 10 and ending with 2 and reserving the sum of the total of each multiplication in an accumulator;
+
+- Afterwards, reserved the rest of the division of the result of that sum by 11;
+
+- If the remainder of the division is greater than 9, the first digit will be 0, if not, the digit will be the remainder of the division.
+
+- The second digit to be validated will be the difference between number 11 and the first digit;
+
+- Finally, a validation is performed between the final number with the last digits and the typed number and a return to the user is printed on the screen;
+
+- The project has both light and dark mode versions.
+
+⚙ Learnings I was able to put into practice:
+
+- HTML semantic and CSS;
+- Java Script;
 
 <br>
  
 ## 💻 Layout
 
-<img src="./assets/img/preview-lk.png" alt="
-project preview">
+<img src="./assets/img/project/preview-validator.png" alt="preview do projeto">
+
+<br>
+
 <p align="center">
   <a href="/LICENSE">
     <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
   </a>
 </p>
+

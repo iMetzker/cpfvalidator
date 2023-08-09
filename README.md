@@ -33,7 +33,7 @@
 
 ## 🚀 Projeto
 
-O projeto consiste em um programa de validação simples de CPF que utiliza ...
+O projeto consiste na criação de uma página web interativa com o usuário para validação de CPF.
 
 <br>
 A lógica para a conta de validação de CPF utilizada no projeto foi com base em que um número de CPF é composto por 11 dígitos, os 9 primeiros são os números base, e os 2 últimos são os chamados dígitos verificadores, que são utilizados para validar se os 9 números base estão corretos.
@@ -42,6 +42,18 @@ A lógica para a conta de validação de CPF utilizada no projeto foi com base e
 
 - Depois, reservado o resto da divisão do resultado dessa soma por 11;
 
+- Se o resto da divisão for maior do que 9, o primeiro dígito será 0, se não for, o dígito será o próprio resto da divisão.
+
+- O segundo dígito a ser validado será a diferença entre o número 11 e o primeiro dígito;
+
+- Por fim é feito uma validação entre o número final com os últimos dígitos e o número digitado e é impresso em tela um retorno para o usuário;
+
+- O projeto conta com a as versões de light e dark mode.
+
+⚙ Aprendizados que pude colocar em prática:
+
+- HTML semântico e CSS;
+- Javascript;
 
 <br>
 
@@ -55,7 +67,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Layout
 
-<img src="./assets/img/preview-lk.png" alt="pré visualização do projeto">
+<img src="./assets/img/project/preview-validator.png" alt="preview do projeto">
+
+<br>
+
 <p align="center">
   <a href="/LICENSE">
     <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
