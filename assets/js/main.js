@@ -65,6 +65,11 @@ function preventSubmit(event) {
     /* slicing to account */
     const cpfPartialDigit = this.cpfClean.slice(0, -2);
     const firstDigit = this.createDigit(cpfPartialDigit);
+    const secondDigit = this.createDigit(cpfPartialDigit + firstDigit);
+    
+    const newCpf = cpfPartialDigit + firstDigit + secondDigit;
+    console.log(newCpf);
+
     return true;
   };
 
@@ -72,12 +77,14 @@ function preventSubmit(event) {
     const cpfArray = Array.from(cpfPartial);
     
     let regressiveCounter = cpfArray.length + 1;
-    let digit = cpfArray.reduce((ac, val) => {
+    const totalPartial = cpfArray.reduce((ac, val) => {
       ac += (regressiveCounter * Number(val));
       regressiveCounter --;
       return ac;
     }, 0);
-    console.log(digit);
+    
+    const digit = 11 - (totalPartial % 11);
+    return digit > 9 ? '0' : String(digit);
   };
 
   console.log(cpf.valida());

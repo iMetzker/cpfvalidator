@@ -35,6 +35,13 @@
 
 O projeto consiste em um programa de validação simples de CPF que utiliza ...
 
+<br>
+A lógica para a conta de validação de CPF utilizada no projeto foi com base em que um número de CPF é composto por 11 dígitos, os 9 primeiros são os números base, e os 2 últimos são os chamados dígitos verificadores, que são utilizados para validar se os 9 números base estão corretos.
+
+- A primeira validação feita foi  multiplicar cada número base em separado, começando com 10 e terminando com 2 e reservando a soma do total de cada multiplicação em um acumulador; 
+
+- Depois, reservado o resto da divisão do resultado dessa soma por 11;
+
 
 <br>
 
