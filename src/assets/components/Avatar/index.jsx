@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { Box, AvatarContainer, Eyescontainer, Eyes, ResultCPF, IconResult, Img } from './styles'
 
 const Avatar = ({avatar, src, alt, result, content}) => {
