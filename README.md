@@ -24,8 +24,10 @@
 
 # Validador de CPF 
 ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![](https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white)
 ![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white)
+![](https://img.shields.io/badge/reactJS-20b2aa?style=for-the-badge&logo=react&logoColor=white)
+ ![](https://img.shields.io/badge/styled_components-fe4164?style=for-the-badge&logo=styled-components&logoColor=white)
 ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 ![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
 
@@ -50,13 +52,6 @@ A lógica para a conta de validação de CPF utilizada no projeto foi com base e
 
 - O projeto conta com a as versões de light e dark mode.
 
-⚙ Aprendizados que pude colocar em prática:
-
-- HTML e CSS;
-- Javascript;
-- React;
-- Styled Components;
-- Git.
 
 <br>
 
@@ -64,9 +59,11 @@ A lógica para a conta de validação de CPF utilizada no projeto foi com base e
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML e CSS
-- JavaScript
-- Git
+- HTML e CSS;
+- Javascript;
+- React;
+- Styled Components;
+- Git.
 
 ## 💻 Layout
 

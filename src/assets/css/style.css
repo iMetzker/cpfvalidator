@@ -29,25 +29,23 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Handjet', cursive;
-	height: 100vh;
+.body {
     background: var(--bg-default) no-repeat top center/cover;
     color: var(--text-color);
-}
-
-body,
-section {
+    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    font-family: 'Handjet', cursive;
+    height: 100vh;
 }
 
 /* avatar */
 
-.false .eyes span {
+.false .eyes span,
+.fail .eyes span {
     display: none;
 }
 
@@ -64,7 +62,7 @@ section {
     background: #ffffff var(--switch-bg-url) no-repeat center;
 }
 
-.light #switch button {
+.light button {
     animation: mode-in .4s forwards;
   }
 

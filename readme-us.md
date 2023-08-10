@@ -24,22 +24,15 @@
 
 # CPF validator
 ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![](https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white)
 ![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white)
+![](https://img.shields.io/badge/reactJS-20b2aa?style=for-the-badge&logo=react&logoColor=white)
+ ![](https://img.shields.io/badge/styled_components-fe4164?style=for-the-badge&logo=styled-components&logoColor=white)
 ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 ![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
 
+
 <br>
-
-## 🛸 Technologies
-
-This project was developed with the following technologies:
-
-- HTML e CSS;
-- JavaScript;
-- React;
-- Styled Components;
-- Git.
 
 ## 🚀 Project
 
@@ -61,16 +54,21 @@ The logic for the CPF validation account used in the project was based on the fa
 
 - The project has both light and dark mode versions.
 
-⚙ Learnings I was able to put into practice:
-
-- HTML semantic and CSS;
-- Java Script;
-
 <br>
+
+## 🛸 Technologies
+
+This project was developed with the following technologies:
+
+- HTML e CSS;
+- JavaScript;
+- React;
+- Styled Components;
+- Git.
  
 ## 💻 Layout
 
-<img src="./assets/img/project/preview-validator.png" alt="preview do projeto">
+<img src="./src/assets/img/preview/preview-validator.png" alt="preview project">
 
 <br>
 

@@ -1,24 +1,23 @@
-import React from 'react';
-import avatarImg from '../../img/avatar/avatar-defaulttest.png';
+import React, { useState, useEffect } from 'react';
+import { Box, AvatarContainer, Eyescontainer, Eyes, ResultCPF, IconResult, Img } from './styles'
 
-import { Box, AvatarContainer, Eyescontainer, Eyes, ResultCPF, IconResult, Title, Img } from './styles'
+const Avatar = ({avatar, src, alt, result, content}) => {
 
-const Avatar = () => {
     return (
         <Box>
-            <AvatarContainer>
-                <Img src={avatarImg} alt="robô com duas antenas e dois olhos abrindo e fechando, todo preto." />
+            <AvatarContainer className={avatar}>
+                <Img src={src} alt={alt} />
                 <Eyescontainer className="eyes">
                     <Eyes/>
                     <Eyes />
                 </ Eyescontainer>
-
-                <ResultCPF className="false" id="result-cpf">
+                <ResultCPF className={`${result}`} id="result-cpf">
                     <IconResult className="icon-heart" />
-                    <p></p>
+                    <p>
+                        {content}
+                    </p>
                 </ ResultCPF>
             </ AvatarContainer>
-            <Title>CPF Validator</Title>
         </ Box>
     );
 };

@@ -1,9 +1,10 @@
 import React from 'react';
-import {SwitchContainer, Button, BoxButton } from './style'
+import {SwitchContainer, Button, BoxButton } from './style';
 
-const Switch = () => {
+const Switch = ({id, event}) => {
+
     return (
-        <SwitchContainer id="switch">
+        <SwitchContainer id={id} onClick={event} >
             <Button />
             <BoxButton />
         </SwitchContainer>

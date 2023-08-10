@@ -94,15 +94,6 @@ right: -13px;
 
 `
 
-export const Title = styled.h1`
-
-padding-top: 20px;
-text-transform: uppercase;
-
-font-size: 35px;
-
-`
-
 export const Img = styled.img`
 
 width: 150px;

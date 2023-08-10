@@ -1,13 +1,20 @@
 import { ButtonInput, Form, Label, InputContainer } from './styles';
-import '../../css/style.css'
+import '../../css/style.css';
 
-const Input = () => {
+const Input = ({submit, change}) => {
+    
     return (
         <div className="interaction">
-            <Form action="" method="get">
+            <Form onSubmit={submit}>
                 <Label htmlFor="cpf">Digite um CPF:</Label>
-                <InputContainer type="text" id="cpf" name="cpf" maxLength="14" />
-                <ButtonInput>Vamos ver</ButtonInput>
+                <InputContainer
+                type="text"
+                id="cpf"
+                name="cpf"
+                maxLength="14"
+                onChange={change}
+                />
+                <ButtonInput type="submit">Vamos ver</ButtonInput>
             </Form>
         </div>
     )
