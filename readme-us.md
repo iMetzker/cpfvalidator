@@ -14,10 +14,10 @@
 
 
 <p align="right">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-license">Licença</a>
+  <a href="#-license">License</a>
 </p>
 
 <br> <br>
@@ -36,11 +36,11 @@
 
 ## 🚀 Project
 
-The project consists of creating a user-interactive web page for CPF validation.
+The project consists of creating a React application that interacts with the user for CPF validation.
 
 <br>
 
-The logic for the CPF validation account used in the project was based on the fact that a CPF number consists of 11 digits, the first 9 are the base numbers, and the last 2 are the so-called check digits, which are used to validate if the base 9 numbers are correct.
+The logic for the CPF validation used in the project was based on the fact that a CPF number consists of 11 digits, the first 9 are the base numbers, and the last 2 are the so-called check digits, which are used to validate if the base 9 numbers are correct.
 
 - The first validation performed was to multiply each base number separately, starting with 10 and ending with 2 and reserving the sum of the total of each multiplication in an accumulator;
 
@@ -50,9 +50,33 @@ The logic for the CPF validation account used in the project was based on the fa
 
 - The second digit to be validated will be the difference between number 11 and the first digit;
 
-- Finally, a validation is performed between the final number with the last digits and the typed number and a return to the user is printed on the screen;
+- Finally, a validation is performed between the final number with the last digits and the typed number and a return to the user is printed on the screen.
 
-- The project has both light and dark mode versions.
+### ⚙ Functionalities 
+- CPF validation;
+- Light and dark mode.
+
+### 🛠 Run the Application
+To run the application on your local machine, follow these steps:
+<br>
+1. Clone the repository using the command:
+
+```bash
+git clone https://github.com/iMetzker/cpfvalidator.git
+```
+2. Open the project in your development environment.
+<br>
+3. Make sure yarn is installed. Otherwise open the terminal of your development environment and run the command:
+
+```bash
+npm install -g yarn
+```
+4. Start the server to view the project using the command:
+
+```bash
+yarn run start
+```
+<br>
 
 <br>
 
@@ -71,6 +95,12 @@ This project was developed with the following technologies:
 <img src="./src/assets/img/preview/preview-validator.png" alt="preview project">
 
 <br>
+
+<p align="center">🔎 Visit the running website <a href="https://cpfvalidator-imetzker.netlify.app/">here.</a>
+</p>
+
+## ✔ License
+This project is licensed under the terms of the MIT License — See file <a href="/LICENSE">LICENSE</a> for details.
 
 <p align="center">
   <a href="/LICENSE">
