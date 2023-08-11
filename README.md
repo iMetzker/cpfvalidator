@@ -65,7 +65,7 @@ Para executar a aplicação na sua máquina local, siga estes passos:
 git clone https://github.com/iMetzker/cpfvalidator.git
 ```
 2. Abra o projeto em seu ambiente de desenvolvimento.
-<br>
+
 3. Certifique-se de de que o yarn esteja instalado. Caso contrário abra o terminal do seu ambiente de desenvolvimento e execute o comando:
 
 ```bash
